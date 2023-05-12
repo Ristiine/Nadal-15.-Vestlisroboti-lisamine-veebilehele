@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8526f60c25.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Movie search page</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-container">
+            <form action="/search" method="POST">
+                <input type="text" name="movieTitle" placeholder="Insert movie title">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="movie-card">
+            <div class="movie-poster-container">
+                <img class="movie-poster" src="<%= poster %>" alt="Deadpool-poster">
+            </div>
+
+            <div class="movie-info-container">
+                <h1 class="movie-info-title"><%= movieData.title %></h1>
+                <p class="movie-genre">
+                    <span class="movie-certification"><strong>R</strong></span>
+                    <span class="release-date"><%= releaseDate %></span> 
+                    <span class="genres"><%= genres %></span> 
+                    <span class="movie-duration"></span>
+                    <span class="runtime"><%= movieData.runtime %></span>
+                </p>
+
+                <div class="movie-info-actions">
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-bookmark"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
+                    </ul>
+
+                </div>
+
+                <p class="movie-info-quote"><%= movieData.tagline %></p>
+
+                <h2 class="movie-info-overview-title">Overview</h2>
+                <p class="movie-info-overview"><%= movieData.overview %></p>
+
+                <ul class="movie-info-people">
+                    <li>
+                        <p>Tim Miller</p>
+                        <p>Director</p>
+                    </li>
+
+                    <li>
+                        <p>Paul Wernick</p>
+                        <p>Writer</p>
+                    </li>
+
+                    <li>
+                        <p>Rhett Reese</p>
+                        <p>Writer</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="botcontainer">
+
+            <div class="chat-container">
+                <iframe
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/4007e52d-94f1-4b0c-97a3-960c24949414">
+                </iframe>
+            </div>
+        </div>
+   
+        <footer>
+            <h3>My socials if you want to discuss the movie :</h3>
+
+            <ul>
+                <li> <a href="#">Twitter <i class="fab fa-twitter"></i></a></li>
+                <li> <a href="#">Instagram <i class="fab fa-instagram"></i></a> </li>
+                <li> <a href="#">Facebook <i class="fab fa-facebook"></i></a> </li>
+                <li> <a href="#">Discord <i class="fa-brands fa-discord"></i></a> </li>
+            </ul>
+            <br>
+            <p>RR &#169; 2023</p>
+            <br>
+            <p><i>**Disclaimer: Lehel kasutatud tekst, pildid, videod ning muu info on kasutusel puhtalt õppe eesmärgil!</i></p>
+            <p><i>Aitäh tähelepanu eest! </i><i class="fa-solid fa-peace"></i></p>
+            <br>
+
+        </footer>
+        
+    </div>
+
+</body>
+</html>
